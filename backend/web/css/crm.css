@@ -1,0 +1,78 @@
+/* ===== BODY ===== */
+body {
+    background: #f5f6fa;
+}
+
+/* ===== LAYOUT ===== */
+.main-wrapper {
+    display: flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #fff;
+    border-right: 1px solid #e5e7eb;
+    transition: width 0.3s ease;
+    /* 🔥 important */
+}
+
+/* SIDEBAR LINKS */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #eef2ff;
+    color: #3b5bfd;
+}
+
+/* ===== SIDEBAR TITLE ===== */
+.sidebar-title {
+    padding: 16px 20px;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    flex: 1;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 20px;
+}
+
+/* ================================================= */
+/* ========== SIDEBAR COLLAPSED STATE =============== */
+/* ================================================= */
+
+body.sidebar-collapsed .sidebar {
+    width: 70px;
+}
+
+/* hide text */
+body.sidebar-collapsed .sidebar span {
+    display: none;
+}
+
+/* center icons */
+body.sidebar-collapsed .sidebar a {
+    justify-content: center;
+    padding: 12px 0;
+}
+
+/* hide title text */
+body.sidebar-collapsed .sidebar-title span {
+    display: none;
+}
